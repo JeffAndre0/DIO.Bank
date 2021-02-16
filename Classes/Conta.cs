@@ -37,11 +37,11 @@ namespace DIO.Bank
         public void Depositar(double valorDepositado)
         {
             Saldo += valorDepositado;
-
+            
             Console.WriteLine($"Saldo atual da conta de {Nome} é {Saldo}");
         }
 
-        public void Transferencia(double valorTransferencia, Conta contaDestino)
+        public void Transferencia (double valorTransferencia, Conta contaDestino)
         {
             if (this.Sacar(valorTransferencia))
                 contaDestino.Depositar(valorTransferencia);
@@ -50,7 +50,7 @@ namespace DIO.Bank
         public override string ToString()
         {
             string retorno = "";
-            retorno += "Tipo de Conta: " + TipoConta + " | ";
+            retorno += "Tipo de Conta: " + TipoConta + " | " ;
             retorno += "Nome: " + Nome + " | ";
             retorno += "Saldo: " + Saldo + " | ";
             retorno += "Crédito: " + Credito;
